@@ -5,6 +5,7 @@ from typing import Tuple
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    """Returns a tuple of size two containing a start index and an end index"""
     if page <= 1:
         start_index = 0
     else:
