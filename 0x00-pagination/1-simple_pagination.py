@@ -25,7 +25,7 @@ class Server:
         self.__dataset = None
 
     def dataset(self) -> List[List]:
-        """Cached dataset
+        """Cached dataset of popular Baby Names
         """
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
@@ -36,10 +36,10 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        assert isinstance(page, int), "input must be an integer"
-        assert isinstance(page_size, int), "input must be an integer"
-        assert page > 0, "input must be greater than 0"
-        assert page_size > 0, "input must be greater than 0"
+        assert isinstance(page, int)
+        assert isinstance(page_size, int)
+        assert page > 0
+        assert page_size > 0
 
         start_index, end_index = index_range(page, page_size)
         data = self.dataset()
