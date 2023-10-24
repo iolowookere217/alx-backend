@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """a function named index_range that takes\
    two integer arguments page and page_size"""
+
 from typing import Tuple, List
 import csv
 import math
@@ -36,6 +37,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """Retrieve a specific "page" of data from the dataset"""
         assert isinstance(page, int)
         assert isinstance(page_size, int)
         assert page > 0
