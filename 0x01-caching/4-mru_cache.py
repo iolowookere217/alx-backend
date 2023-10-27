@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""This module defines a class `LRUCache`"""
+"""This module defines a class `MRUCache`"""
 
 from base_caching import BaseCaching
 from collections import deque
 
 
-class LRUCache(BaseCaching):
+class MRUCache(BaseCaching):
     """A caching system"""
 
     def __init__(self):
